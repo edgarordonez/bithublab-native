@@ -8,7 +8,7 @@ export const BitHubLabLogo = () => (
   <Fragment>
     <Image
       source={ASSETS.images.logo}
-      style={{ width: 250, height: 250 }}
+      style={{ width: 150, height: 150 }}
       resizeMode="contain"
     />
     <Text style={styles.title}>
@@ -22,6 +22,6 @@ export const BitHubLabLogo = () => (
 const styles = StyleSheet.create({
   title: {
     fontFamily: 'Roboto-Black',
-    fontSize: 56,
+    fontSize: 50,
   },
 });
