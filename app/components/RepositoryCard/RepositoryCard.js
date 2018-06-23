@@ -1,25 +1,41 @@
 // @flow
 
 import React from 'react';
-import { StyleSheet, View, Image, Text } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Image, Text } from 'react-native';
+import ASSETS from '@bithublab/assets';
 
-export const RepositoryCard = () => (
-  <View style={[styles.container, shadowStyle]}>
-    <Image
-      style={styles.image}
-      source={{
-        uri:
-          'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png',
-      }}
-    />
-    <View style={styles.info}>
-      <Text style={styles.title}>edgarordonez/d3-stencil</Text>
-      <Text style={styles.description}>
-        Components of graphs build with StencilJS & D3.js
-      </Text>
-    </View>
-  </View>
-);
+type Props = {
+  repository: {
+    provider: 'github' | 'gitlab' | 'bitbucket',
+    name: string,
+    description: string,
+    url: string,
+  },
+  handleOnPress: () => void,
+};
+
+export default class RepositoryCard extends React.Component<Props> {
+  onPressCard = () => {
+    const { url } = this.props.repository;
+    this.props.handleOnPress(url);
+  };
+
+  render() {
+    const { provider, name, description } = this.props.repository;
+
+    return (
+      <TouchableOpacity onPress={this.onPressCard}>
+        <View style={[styles.container, shadowStyle]}>
+          <Image style={styles.image} source={ASSETS.image[provider]} />
+          <View style={styles.info}>
+            <Text style={styles.name}>{name}</Text>
+            <Text style={styles.description}>{description}</Text>
+          </View>
+        </View>
+      </TouchableOpacity>
+    );
+  }
+}
 
 const shadowStyle = {
   shadowOpacity: 0.5,
@@ -34,6 +50,7 @@ const styles = StyleSheet.create({
     margin: 10,
     backgroundColor: '#fff',
     padding: 20,
+    elevation: 5,
   },
   image: {
     width: 25,
@@ -44,7 +61,7 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     paddingLeft: 5,
   },
-  title: {
+  name: {
     fontFamily: 'Roboto-Black',
     fontSize: 20,
     marginBottom: 5,
