@@ -3,6 +3,9 @@
 const ASSETS = {
   images: {
     logo: require('./images/logo.jpg'),
+    github: require('./images/github.png'),
+    gitlab: require('./images/gitlab.png'),
+    bitbucket: require('./images/bitbucket.png'),
   },
   fonts: {
     RobotoBlack: require('./fonts/Roboto-Black.ttf'),
