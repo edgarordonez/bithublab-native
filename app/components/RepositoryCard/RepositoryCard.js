@@ -26,7 +26,7 @@ export default class RepositoryCard extends React.Component<Props> {
     return (
       <TouchableOpacity onPress={this.onPressCard}>
         <View style={[styles.container, shadowStyle]}>
-          <Image style={styles.image} source={ASSETS.image[provider]} />
+          <Image style={styles.image} source={ASSETS.images[provider]} />
           <View style={styles.info}>
             <Text style={styles.name}>{name}</Text>
             <Text style={styles.description}>{description}</Text>
