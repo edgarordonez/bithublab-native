@@ -4,8 +4,7 @@ import React, { Fragment } from 'react';
 import { Platform, StyleSheet, SafeAreaView, View } from 'react-native';
 import Expo, { Font } from 'expo';
 import ASSETS from '@bithublab/assets';
-
-import { BitHubLabLogo, RepositoryCard } from './components';
+import { BitHubLabLogo, RepositoryList } from '@bithublab/components';
 
 export default class BitHubLab extends React.Component {
   state = {
@@ -32,7 +31,7 @@ export default class BitHubLab extends React.Component {
             <View style={styles.logo}>
               <BitHubLabLogo />
             </View>
-            <RepositoryCard />
+            <RepositoryList repositories={[]} />
           </Fragment>
         ) : null}
       </SafeAreaView>
