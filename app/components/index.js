@@ -1,7 +1,8 @@
 // @flow
 
 import { BitHubLabLogo } from './BitHubLabLogo/BitHubLabLogo';
-import RepositoryCard from './RepositoryCard/RepositoryCard';
-import { RepositoryList } from './RepositoryList/RepositoryList';
+import { Search } from './Search/Search';
+import RepositoryCard from './Repositories/RepositoryCard/RepositoryCard';
+import { RepositoryList } from './Repositories/RepositoryList/RepositoryList';
 
-export { BitHubLabLogo, RepositoryCard, RepositoryList };
+export { BitHubLabLogo, Search, RepositoryCard, RepositoryList };
