@@ -3,15 +3,17 @@
 import React from 'react';
 import { StyleSheet, View, TextInput } from 'react-native';
 
-const handleOnChange = (text: string) => console.log(text);
+type Props = {
+  handleOnSearch: () => void,
+};
 
-export const Search = () => {
+export const Search = ({ handleOnSearch }: Props) => {
   return (
     <View style={style.container}>
       <TextInput
         style={style.input}
         placeholder="Search the magical world of OSS..."
-        onChangeText={handleOnChange}
+        onChangeText={handleOnSearch}
         selectionColor="#2684ff"
         underlineColorAndroid="transparent"
       />
