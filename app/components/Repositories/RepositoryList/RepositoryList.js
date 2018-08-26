@@ -3,9 +3,10 @@
 import React from 'react';
 import { FlatList, Linking } from 'react-native';
 import { RepositoryCard } from '@bithublab/components';
+import { Repository } from './../types/Repository';
 
 type Props = {
-  repositories: string[],
+  repositories: Repository[],
 };
 
 const handleOnPress = (url: string) => {
@@ -19,6 +20,7 @@ const handleOnPress = (url: string) => {
 };
 
 const extractKeyRepositories = (item, index) => `${index}`;
+
 const renderRepositories = ({ item }) => (
   <RepositoryCard repository={item} handleOnPress={handleOnPress} />
 );

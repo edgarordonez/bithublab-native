@@ -3,39 +3,31 @@
 import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Image, Text } from 'react-native';
 import ASSETS from '@bithublab/assets';
+import { Repository } from './../types/Repository';
 
 type Props = {
-  repository: {
-    provider: 'github' | 'gitlab' | 'bitbucket',
-    name: string,
-    description: string,
-    url: string,
-  },
+  repository: Repository,
   handleOnPress: () => void,
 };
 
-export default class RepositoryCard extends React.Component<Props> {
-  onPressCard = () => {
-    const { url } = this.props.repository;
-    this.props.handleOnPress(url);
-  };
+const onPressCard = (handleOnPress: Function, url: string) => handleOnPress(url);
 
-  render() {
-    const { provider, name, description } = this.props.repository;
+export const RepositoryCard = (props: Props) => {
+  const { repository, handleOnPress } = props;
+  const { provider, name, description, url } = repository;
 
-    return (
-      <TouchableOpacity onPress={this.onPressCard}>
-        <View style={[styles.container, shadowStyle]}>
-          <Image style={styles.image} source={ASSETS.images[provider]} />
-          <View style={styles.info}>
-            <Text style={styles.name}>{name}</Text>
-            <Text style={styles.description}>{description}</Text>
-          </View>
+  return (
+    <TouchableOpacity onPress={() => onPressCard(handleOnPress, url)}>
+      <View style={[styles.container, shadowStyle]}>
+        <Image style={styles.image} source={ASSETS.images[provider]} />
+        <View style={styles.info}>
+          <Text style={styles.name}>{name}</Text>
+          <Text style={styles.description}>{description}</Text>
         </View>
-      </TouchableOpacity>
-    );
-  }
-}
+      </View>
+    </TouchableOpacity>
+  );
+};
 
 const shadowStyle = {
   shadowOpacity: 0.5,
