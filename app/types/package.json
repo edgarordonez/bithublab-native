@@ -1,5 +1,5 @@
 {
-  "name": "@bithublab/assets",
+  "name": "@bithublab/types",
   "version": "0.0.2",
   "private": true,
   "main": "index.js"

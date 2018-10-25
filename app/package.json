@@ -1,0 +1,11 @@
+{
+  "name": "@bithublab/app",
+  "version": "0.0.2",
+  "private": true,
+  "dependencies": {
+    "@bithublab/assets": "^0",
+    "@bithublab/types": "^0",
+    "@bithublab/services": "^0",
+    "@bithublab/components": "^0"
+  }
+}
