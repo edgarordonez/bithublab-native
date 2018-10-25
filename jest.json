@@ -1,0 +1,13 @@
+{
+  "preset": "jest-expo",
+  "moduleNameMapper": {
+    "@bithublab/assets": "<rootDir>/app/assets/index.js",
+    "@bithublab/components": "<rootDir>/app/components/index.js",
+    "@bithublab/services": "<rootDir>/app/services/index.js",
+    "@bithublab/types": "<rootDir>/app/types/index.js",
+    "@bithublab/mocks": "<rootDir>/app/__mocks__/index.js"
+  },
+  "testPathIgnorePatterns": ["/node_modules/", "/app/assets/"],
+  "coveragePathIgnorePatterns": ["/node_modules/", "/app/assets/"],
+  "collectCoverageFrom": ["app/**/*.js"]
+}

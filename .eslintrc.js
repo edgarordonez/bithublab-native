@@ -3,6 +3,12 @@ const WARNING = 1;
 const ERROR = 2;
 
 module.exports = {
+  settings: {
+    react: {
+      version: "16.3.1",
+      flowVersion: "0.82",
+    }
+  },
   env: {
     browser: true,
     es6: true,

@@ -2,6 +2,24 @@
   "name": "bithublab",
   "displayName": "bithublab",
   "expo": {
-    "sdkVersion": "27.0.0"
+    "name": "BitHubLab",
+    "slug": "bithublab",
+    "description": "Search for open source repositories on github, gitlab, and bitbucket all at once.",
+    "version": "0.0.2",
+    "sdkVersion": "27.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#2684ff",
+    "icon": "app/assets/images/icon.png",
+    "splash": {
+      "image": "app/assets/images/splash.png",
+      "backgroundColor": "#FAFAFA",
+      "resizeMode": "cover"
+    },
+    "ios": {
+      "bundleIdentifier": "org.bithublab.bithublabApp"
+    },
+    "android": {
+      "package": "org.bithublab.bithublabApp"
+    }
   }
 }
