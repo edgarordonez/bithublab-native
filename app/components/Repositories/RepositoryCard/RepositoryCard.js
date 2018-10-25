@@ -2,22 +2,21 @@
 
 import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Image, Text } from 'react-native';
+import type { Repository } from '@bithublab/types';
 import ASSETS from '@bithublab/assets';
-import { Repository } from './../types/Repository';
 
 type Props = {
   repository: Repository,
-  handleOnPress: () => void,
+  handleOnPress: (url?: string) => void,
 };
 
-const onPressCard = (handleOnPress: Function, url: string) => handleOnPress(url);
-
-export const RepositoryCard = (props: Props) => {
-  const { repository, handleOnPress } = props;
+export const RepositoryCard = ({ repository, handleOnPress }: Props) => {
+  /* eslint-disable react/jsx-no-bind */
   const { provider, name, description, url } = repository;
+  const onPressCard = () => handleOnPress(url);
 
   return (
-    <TouchableOpacity onPress={() => onPressCard(handleOnPress, url)}>
+    <TouchableOpacity onPress={onPressCard}>
       <View style={[styles.container, shadowStyle]}>
         <Image style={styles.image} source={ASSETS.images[provider]} />
         <View style={styles.info}>
@@ -49,7 +48,6 @@ const styles = StyleSheet.create({
     height: 25,
   },
   info: {
-    height: 80,
     paddingRight: 10,
     paddingLeft: 5,
   },

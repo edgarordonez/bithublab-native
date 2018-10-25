@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Renders without crashing 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 5,
+      "elevation": 1,
+      "margin": 10,
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="Search the magical world of OSS..."
+    selectionColor="#2684ff"
+    style={
+      Object {
+        "borderRadius": 5,
+        "padding": 10,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;

@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BitHubLabLogo Renders without crashing 1`] = `
+Array [
+  <Image
+    resizeMode="contain"
+    source={1}
+    style={
+      Object {
+        "height": 150,
+        "width": 150,
+      }
+    }
+  />,
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontFamily": "Roboto-Black",
+        "fontSize": 50,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#2684ff",
+        }
+      }
+    >
+      Bit
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#000000",
+        }
+      }
+    >
+      Hub
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#8c929d",
+        }
+      }
+    >
+      Lab
+    </Text>
+  </Text>,
+]
+`;

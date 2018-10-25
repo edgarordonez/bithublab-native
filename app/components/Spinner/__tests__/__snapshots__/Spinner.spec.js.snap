@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner Renders without crashing 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 10,
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#2684ff"
+    hidesWhenStopped={true}
+    size="large"
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#8c929d",
+        "fontFamily": "Roboto",
+        "fontSize": 15,
+        "marginTop": 15,
+        "textAlign": "center",
+      }
+    }
+  >
+    Searching repositories...
+  </Text>
+</View>
+`;
