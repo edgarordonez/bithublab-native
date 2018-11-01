@@ -37,7 +37,7 @@ module.exports = {
     curly: ERROR,
     'no-console': [ERROR, { allow: ['warn', 'error'] }],
     'no-duplicate-imports': ERROR,
-    'no-underscore-dangle': ERROR,
+    'no-underscore-dangle': OFF,
     'import/order': [
       ERROR,
       {

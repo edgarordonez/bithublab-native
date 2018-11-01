@@ -9,5 +9,6 @@
   },
   "testPathIgnorePatterns": ["/node_modules/", "/app/assets/"],
   "coveragePathIgnorePatterns": ["/node_modules/", "/app/assets/"],
-  "collectCoverageFrom": ["app/**/*.js"]
+  "collectCoverageFrom": ["app/**/*.js"],
+  "setupTestFrameworkScriptFile": "<rootDir>/app/setupTests.js"
 }
