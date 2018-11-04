@@ -14,7 +14,7 @@ import {
 import Expo, { Font } from 'expo';
 import ASSETS from '@bithublab/assets';
 import type { Repository, ProvidersCollectionType } from '@bithublab/types';
-import { RepositoryService } from '@bithublab/services';
+import { RepositoryService, providersMatrixBuilderService } from '@bithublab/services';
 import {
   BitHubLabLogo,
   Search,
@@ -53,19 +53,7 @@ export default class BitHubLab extends React.Component<{}, State> {
 
   setRepositories = (repositories: ProvidersCollectionType): void => {
     const { providersHistory } = this.state;
-    const github = repositories['github'] || providersHistory['github'] || [];
-    const gitlab = repositories['gitlab'] || providersHistory['gitlab'] || [];
-    const bitbucket =
-      repositories['bitbucket'] || providersHistory['bitbucket'] || [];
-
-    const matrix = [github, gitlab, bitbucket];
-    const result = matrix
-      .reduce((acc, arr) => (acc.length < arr.length ? arr : acc), [])
-      .map((_, index) => matrix.map(arr => arr[index]))
-      .reduce(
-        (acc, arr) => [...acc, ...arr.filter(item => item !== undefined)],
-        [],
-      );
+    const result = providersMatrixBuilderService(repositories, providersHistory);
 
     this.setState(prevState => ({
       loading: false,
