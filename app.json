@@ -4,8 +4,8 @@
   "expo": {
     "name": "BitHubLab",
     "slug": "bithublab",
-    "description": "Search for open source repositories on github, gitlab, and bitbucket all at once.",
-    "version": "0.0.2",
+    "description": "Search for open source repositories on Github, Gitlab, and Bitbucket all at once.",
+    "version": "0.0.3",
     "sdkVersion": "27.0.0",
     "orientation": "portrait",
     "primaryColor": "#2684ff",
@@ -19,7 +19,9 @@
       "bundleIdentifier": "org.bithublab.bithublabApp"
     },
     "android": {
-      "package": "org.bithublab.bithublabApp"
-    }
+      "package": "org.bithublab.bithublabApp",
+      "versionCode": 2
+    },
+    "githubUrl": "https://github.com/edgarordonez/bithublab-native"
   }
 }
